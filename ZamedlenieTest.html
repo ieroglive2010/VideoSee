@@ -3,25 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Замедление загрузки</title>
+    <title>Доступ ограничен</title>
     <script>
-        async function checkCountryAndDelay() {
-            // Используем сторонний API для определения страны
-            const response = await fetch('https://ipapi.co/json/');
-            const data = await response.json();
-            const userCountry = data.country;
+        async function checkCountry() {
+            try {
+                // Используем сторонний API для определения страны
+                const response = await fetch('https://ipapi.co/json/');
+                const data = await response.json();
+                const userCountry = data.country;
 
-            // Замените 'RU' на код страны, для которой вы хотите замедлить загрузку
-            if (userCountry !== 'RU') {
-                // Добавляем задержку в 5 секунд (5000 миллисекунд)
-                await new Promise(resolve => setTimeout(resolve, 5000));
+                // Замените 'RU' на код страны, для которой вы хотите ограничить доступ
+                if (userCountry === 'RU') {
+                    document.getElementById('content').innerHTML = '<h1>Доступ запрещён для пользователей из России.</h1>';
+                } else {
+                    document.getElementById('content').innerHTML = '<h1>Добро пожаловать на наш сайт!</h1>';
+                }
+            } catch (error) {
+                console.error('Ошибка при определении страны:', error);
+                document.getElementById('content').innerHTML = '<h1>Произошла ошибка. Попробуйте позже.</h1>';
             }
-
-            // После задержки загружаем контент
-            document.getElementById('content').innerHTML = '<h1>Добро пожаловать на наш сайт!</h1>';
         }
 
-        window.onload = checkCountryAndDelay;
+        window.onload = checkCountry;
     </script>
 </head>
 <body>
