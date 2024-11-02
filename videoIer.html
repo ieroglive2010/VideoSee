@@ -57,7 +57,6 @@
                     <div>
                         <p>ieroglive</p>
                         <span>0 sub.</span>
-                    </div>
     <style>
         .subscribe-button {
             padding: 10px 20px;
@@ -72,16 +71,30 @@
         .subscribed {
             background-color: #ccc; /* Серый цвет */
         }
+
+        .subscriber-count {
+            font-size: 20px;
+            margin-top: 10px;
+        }
     </style>
 </head>
 <body>
 
 <button type="button" class="subscribe-button" id="subscribeButton">Subscribe</button>
+<div class="subscriber-count" id="subscriberCount">Подписчиков: 0</div>
 
 <script>
     const button = document.getElementById('subscribeButton');
+    const subscriberCount = document.getElementById('subscriberCount');
+    let count = 0; // Начальное количество подписчиков
 
     button.addEventListener('click', function() {
+        // Увеличиваем количество подписчиков
+        count++;
+        
+        // Обновляем текст с количеством подписчиков
+        subscriberCount.textContent = Подписчиков: ${count};
+        
         // Переключаем класс, чтобы изменить стиль кнопки
         button.classList.toggle('subscribed');
         
@@ -93,10 +106,6 @@
         }
     });
 </script>
-
-</body>
-</html>
-
 
                 </div>
 
