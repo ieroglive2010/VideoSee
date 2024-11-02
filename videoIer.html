@@ -55,60 +55,11 @@
                 <div class="owner">
                     <img src="./images/IMG_20240806_151812.jpg">
                     <div>
-                        <p>ieroglive</p>
-                        <span>0 sub.</span>
-    <style>
-        .subscribe-button {
-            padding: 10px 20px;
-            background-color: #f00; /* Красный цвет */
-            color: #fff; /* Белый текст */
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        .subscribed {
-            background-color: #ccc; /* Серый цвет */
-        }
-
-        .subscriber-count {
-            font-size: 20px;
-            margin-top: 10px;
-        }
-    </style>
-</head>
-<body>
-
-<button type="button" class="subscribe-button" id="subscribeButton">Subscribe</button>
-<div class="subscriber-count" id="subscriberCount">Подписчиков: 0</div>
-
-<script>
-    const button = document.getElementById('subscribeButton');
-    const subscriberCount = document.getElementById('subscriberCount');
-    let count = 0; // Начальное количество подписчиков
-
-    button.addEventListener('click', function() {
-        // Увеличиваем количество подписчиков
-        count++;
-        
-        // Обновляем текст с количеством подписчиков
-        subscriberCount.textContent = Подписчиков: ${count};
-        
-        // Переключаем класс, чтобы изменить стиль кнопки
-        button.classList.toggle('subscribed');
-        
-        // Меняем текст кнопки (опционально)
-        if (button.classList.contains('subscribed')) {
-            button.textContent = 'Subscribed';
-        } else {
-            button.textContent = 'Subscribe';
-        }
-    });
-</script>
-
+                        <p>ieroglive_VideoSee</p>
+                        <span>1 sub.</span>
+                    </div>
+                    <button type="button">Subscribe</button>
                 </div>
-
                 <div class="vid-des">
                     <p>Video for tests.</p>
                     <hr>
@@ -127,9 +78,9 @@
                         <img src="./images/thumbnail1-owner.jpg" alt="" srcset="">
                         <div>
                             <h3>
-                                TemeniaNews <span>Unknown</span>
+                                Perry Balloon <span>Unknown</span>
                             </h3>
-                            <p>Нас зарегай ёпта</p>
+                            <p>Ждем создание системы аккаунтов, день 1</p>
 
                                 <div class="cmnt-react">
                                     <img src="./images/like.png" alt="" srcset="">
@@ -150,7 +101,7 @@
                 <div class="side-video-list">
                     <a href="video-1.html" class="small-thumbnail"> <img src="./images/thumbnail1.png" alt="" srcset=""></a>
                     <div class="vid-info">
-                        <a href="video-1.html">General Grievous Coruscant Battle - Star Wars III Revenge of the Sith [Closed Captioned]</a>
+                        <a href="video-1.html">General Grievous Coruscant Battle - Star Wars III Revenge of the Sith</a>
                         <p>Perry Balloon</p>
                         <p>Noboby Views This</p>
                     </div>
@@ -163,9 +114,14 @@
                         <p>Nobody Views This</p>
                     </div>
                 </div>
-
-
-
+                <div class="side-video-list">
+                    <a href="video-2.html" class="small-thumbnail"> <img src="./images/thumbnail2.png" alt="" srcset=""></a>
+                    <div class="vid-info">
+                        <a href="video-2.html">Майнкрафт для нубов - Озвучка от Hohol19</a>
+                        <p>Perry Balloon</p>
+                        <p>Nobody Views This</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
