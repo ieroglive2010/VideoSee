@@ -49,4 +49,59 @@
             
             </div>
         </div>
+>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 20px;
+        }
+        .playlist {
+            margin-top: 20px;
+        }
+        .video {
+            cursor: pointer;
+            padding: 10px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            margin-bottom: 5px;
+            transition: background-color 0.3s;
+        }
+        .video:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Популярные плейлисты</h1>
+<video id="videoPlayer" width="640" height="360" controls>
+    <source id="videoSource" src="" type="video/mp4">
+    Браузер не способен выдержать такое творение - video.
+</video>
+
+<div class="playlist">
+    <div class="video" data-src="video1.mp4">Видео 1 - Описание 1</div>
+    <div class="video" data-src="video2.mp4">Видео 2 - Описание 2</div>
+    <div class="video" data-src="video3.mp4">Видео 3 - Описание 3</div>
+    <div class="video" data-src="video4.mp4">Видео 4 - Описание 4</div>
+</div>
+
+<script>
+    const videos = document.querySelectorAll('.video');
+    const videoPlayer = document.getElementById('videoPlayer');
+    const videoSource = document.getElementById('videoSource');
+
+    videos.forEach(video => {
+        video.addEventListener('click', () => {
+            const src = video.getAttribute('data-src');
+            videoSource.src = src;
+            videoPlayer.load();
+            videoPlayer.play();
+        });
+    });
+</script>
+
+</body>
+</html>
 
