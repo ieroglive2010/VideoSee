@@ -100,6 +100,23 @@
 
 <script src="side-bar.js"></script>
 
+<!-- Вставьте этот код в index.html -->
+<script>
+    window.onload = function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const username = urlParams.get('username');
+        const avatar = urlParams.get('avatar');
+        const registrationDate = urlParams.get('date');
+
+        if (username && avatar && registrationDate) {
+            const userInfoDiv = document.createElement('div');
+            userInfoDiv.className = 'user-info';
+            userInfoDiv.innerHTML = 
+                <img src="${decodeURIComponent(avatar)}" class="user-avatar" alt="Аватар">
+                <p>Пользователь: ${decodeURIComponent(username)}</p>
+                <p>Дата регистрации: ${decodeURIComponent(registrationDate)}</p>
+            ;
+
 
 </body>
 </html>
