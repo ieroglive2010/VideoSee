@@ -1,30 +1,24 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Создать аккаунт</title>
+    <title>Регистрация</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Регистрация</h1>
-        <form id="registrationForm" action="/register" method="POST">
-            <div class="form-group">
-                <label for="username">Ник:</label>
-                <input type="text" id="username" name="username" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Электронная почта:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="password">Пароль каков:</label>
-                <input type="password" id="password" name="password" required>
-            </div>
-            <button type="submit">Продолжить</button>
-        </form>
-        <a href="index.html"<p>Есть аккаунт уже?</a> <a href="ieroglive2010.github.io/VideoSee">Войти</a></p>
-    </div>
+
+<div class="container">
+    <h2>Регистрация</h2>
+    <form id="registrationForm" action="/register" method="POST" enctype="multipart/form-data">
+        <input type="text" name="username" placeholder="Имя пользователя" required>
+        <input type="email" name="email" placeholder="Электронная почта" required>
+        <input type="password" name="password" placeholder="Пароль" required>
+        <input type="file" name="avatar" accept="image/*" required>
+        <input type="submit" value="Зарегистрироваться">
+    </form>
+    <div class="message" id="message"></div>
+</div>
+
 </body>
 </html>
