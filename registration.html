@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Создание аккаунта</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Создание аккаунта</h1>
+        <form id="registrationForm" action="/register" method="POST">
+            <div class="form-group">
+                <label for="username">Имя пользователя (юзернейм):</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Электронная почта:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Придумайте пароль:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Создать аккаунт</button>
+        </form>
+        <p>Уже есть аккаунт? <a href="login.html">Войти</a></p>
+    </div>
+</body>
+</html>

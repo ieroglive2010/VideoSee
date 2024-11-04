@@ -24,7 +24,7 @@
             <img src="./images/upload.png" alt="" srcset="">
             <img src="./images/more.png" alt="" srcset="">
             <img src="./images/notification.png" alt="" srcset="">
-            <a href="register.html"><img src="./images/nilava.jpeg" class="user-icon" alt="" srcset=""><p>Рега</p></p></a>
+            <a href="registration.html"><img src="./images/nilava.jpeg" class="user-icon" alt="" srcset=""><p>Войти</p></p></a>
         </div>
     </nav>
 
@@ -38,29 +38,17 @@
              <hr>
              <a href="#"><img src="./images/library.png"><p>Сохранённые видео</p></a>
              <a href="#"><img src="./images/history.png"><p>О себе</p></a>
-             <a href="ieroglive2010.github.io/VideoSee/playlist.html"><img src="./images/playlist.png"><p>Плейлисты</p></a>
+             <a href="#"><img src="./images/playlist.png"><p>Плейлисты</p></a>
              <a href="#"><img src="./images/messages.png"><p>Сообщество</p></a>
              <hr>
             </div>
           <div class="subscribed-list">
               <h3>SUBSCRIPTIONS</h3>
               <h3>ieroglive</h3>
-              
+
+            
+            </div>
         </div>
-     </div>
-
-<body>
-    <div class="navbar">
-        <button class="category-button">Все</button>
-        <button class="category-button">Музыка</button>
-        <button class="category-button">Спорт</button>
-        <button class="category-button">Игры</button>
-        <button class="category-button">Фильмы</button>
-        <button class="category-button">Наука</button>
-        <button class="category-button">Технологии</button>
-    </div>
-</body>
-
 
 <!-- Main Body -->
 <div class="container">
@@ -112,23 +100,6 @@
 
 
 <script src="side-bar.js"></script>
-
-<!-- Вставьте этот код в index.html -->
-<script>
-    window.onload = function() {
-        const urlParams = new URLSearchParams(window.location.search);
-        const username = urlParams.get('username');
-        const avatar = urlParams.get('avatar');
-        const registrationDate = urlParams.get('date');
-
-        if (username && avatar && registrationDate) {
-            const userInfoDiv = document.createElement('div');
-            userInfoDiv.className = 'user-info';
-            userInfoDiv.innerHTML = 
-                <img src="${decodeURIComponent(avatar)}" class="user-avatar" alt="Аватар">
-                <p>Пользователь: ${decodeURIComponent(username)}</p>
-                <p>Дата регистрации: ${decodeURIComponent(registrationDate)}</p>
-            ;
 
 
 </body>
