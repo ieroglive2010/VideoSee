@@ -102,7 +102,7 @@ margin-right: 20px;
 
 
 .shortcut-links a:first-child{
-    color: #ed3833;
+    color: #3346ed;
 }
 
 .sidebar hr{
@@ -501,42 +501,8 @@ margin-right: 20px;
         display: block;
     }
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
 }
 
-.navbar {
-    display: flex;
-    justify-content: center;
-    background-color: #f9f9f9;
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
-    height: 60px;
-}
-
-.category-button {
-    background-color: transparent;
-    border: none;
-    color: #333;
-    padding: 10px 20px;
-    margin: 0 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.category-button:hover {
-    background-color: #e0e0e0;
-    color: #000;
-}
-
-.category-button:focus {
-    outline: none;
-}
-
-}
 
 
 
